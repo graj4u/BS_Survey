@@ -128,8 +128,8 @@ static const NSTimeInterval kNextQuizInterval = 2.0;
 
 
 
-- (void)showNextQuiz
-{
+- (void)showNextQuiz {
+    
 	
     SurveyItemController *item = [self.survey nextQuiz];
 	
@@ -146,8 +146,8 @@ static const NSTimeInterval kNextQuizInterval = 2.0;
                         self.answerButton4,self.answerButton5, nil];
     NSUInteger i;
     
-    for (i = 0; i < [choices count] && i < [buttons count]; i++) 
-	{
+    for (i = 0; i < [choices count] && i < [buttons count]; i++) {
+        
         NSString *str = [choices objectAtIndex:i];
 		NSString *sNo = [NSString stringWithFormat:@"%d",i+1];
 		NSString *space = @"   ";
@@ -166,9 +166,8 @@ static const NSTimeInterval kNextQuizInterval = 2.0;
 
 
 
-- (IBAction)answer:(id)sender
-{
-	
+- (IBAction)answer:(id)sender {
+    
     self.answerButton1.enabled = NO;
     self.answerButton2.enabled = NO;
     self.answerButton3.enabled = NO;
@@ -198,24 +197,25 @@ static const NSTimeInterval kNextQuizInterval = 2.0;
 		[answeredArr addObject:[NSNumber numberWithInt:scorePoint]];
 		
 		 NSLog(@"answered arr:-->%@",answeredArr);
-		if (scorePoint==1)
-		{
+        
+		if (scorePoint==1){
+            
 			[oneArr addObject:[NSNumber numberWithInt:scorePoint]];
 		}
-		else if (scorePoint==2)
-		{
+		else if (scorePoint==2){
+            
 			[twoArr addObject:[NSNumber numberWithInt:scorePoint]];
 		}
-		else if (scorePoint==3)
-		{
+		else if (scorePoint==3){
+            
 			[threeArr addObject:[NSNumber numberWithInt:scorePoint]];
 		}
-		else if (scorePoint==4)
-		{
+		else if (scorePoint==4){
+            
 			[fourArr addObject:[NSNumber numberWithInt:scorePoint]];
 		}
-		else if (scorePoint==5)
-		{
+		else if (scorePoint==5){
+            
 			[fiveArr addObject:[NSNumber numberWithInt:scorePoint]];
 		}
 
@@ -278,12 +278,12 @@ static const NSTimeInterval kNextQuizInterval = 2.0;
 #pragma mark -
 #pragma mark Custom alert view delegate method
 
-- (void) CustomAlertView:(CustomAlertView *)alert wasDismissedWithValue:(NSString *)value
-{
+- (void) CustomAlertView:(CustomAlertView *)alert wasDismissedWithValue:(NSString *)value {
+    
     //feedbackLabel.text = [NSString stringWithFormat:@"'%@' was entered", value];
 }
-- (void) customAlertViewWasCancelled:(CustomAlertView *)alert
-{
+- (void) customAlertViewWasCancelled:(CustomAlertView *)alert {
+    
     //feedbackLabel.text = NSLocalizedString(@"User cancelled alert", @"User cancelled alert");
 }
 
