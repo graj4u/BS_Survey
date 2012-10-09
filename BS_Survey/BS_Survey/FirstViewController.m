@@ -43,6 +43,7 @@
 
 -(void)loadAboutQuiz
 {
+    
 	PopupView *popupView = [[PopupView alloc] init];
 	
 	UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 300, 440)];
